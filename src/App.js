@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import './components/style.css';
 import { AnimeList } from "./components/AnimeList";
 import { AnimeInfo } from "./components/AnimeInfo";
+import { AddtoList } from "./components/AddtoList";
 
 function App() {
 
@@ -10,6 +11,13 @@ function App() {
   const [animeData, setAnimeData] = useState()
 
   const [animeInfo, setAnimeInfo] = useState()
+
+  const [myAnimeList, setMyAnimeList] = useState([])
+
+  const addTo = (anime) => {
+    const newArray = [...myAnimeList, anime]
+    setMyAnimeList(newArray);
+  }
 
   const getData = async () => {
     const res = await fetch(`https://api.jikan.moe/v4/anime?q=${search}&limit=20`)
@@ -40,6 +48,16 @@ function App() {
           <div className="row">
             <AnimeList animelist={animeData} 
             setAnimeInfo={setAnimeInfo}
+            animeComponent={AddtoList}
+            handleList={(anime) => addTo(anime)}
+            />
+          </div>
+          <h2 className="text-heading">Minha Lista</h2>
+          <div className="row">
+            <AnimeList animelist={myAnimeList} 
+            setAnimeInfo={setAnimeInfo}
+            animeComponent={AddtoList}
+            handleList={(anime) => addTo(anime)}
             />
           </div>
         </div>
