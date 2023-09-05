@@ -1,3 +1,31 @@
+<h1 align="center"> Minha Lista Anime </h1>
+
+<br>
+
+<p align="center">
+  <img alt="Tela Inicial + overlay" src=".github/preview.jpg" width="100%">
+</p>
+
+<p align="center">
+  <img alt="Tela de lista + info" src=".github/preview2.jpg" width="100%">
+</p>
+
+
+## Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+* HTML
+* CSS
+* JavaScript
+* React
+
+
+## Projeto
+
+O projeto da Lista de Animes permite voce pesquisar seus animes favoritos na barra de pesquisa e botar na sua lista para sempre lembrar deles, ao passar o mouse a sinopse do anime vai aparecer e ao clicar na imagem do anime informações no canto esquerdo vai aparecer descrevendo mais sobre o anime. Para adicionar um anime na sua lista é só clicar no botão de Adicionar Anime e para tirar é só ir até sua lista e apertar no botão de Remover da Lista. O projeto foi feito usando o [API Jikan](https://jikan.moe/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
